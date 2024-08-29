@@ -25,7 +25,7 @@ export default function NewProducts() {
                     to="/"
                     className="rounded-md bg-indigo-600 p-3 text-sm font-bold text-white shadow-sm hover:bg-indigo-500"
                 >
-                    Agregar Producto
+                    Todos los productos
                 </Link>
             </div>
             { error && <ErrorMessage>{error}</ErrorMessage>}
