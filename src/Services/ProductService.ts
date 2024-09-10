@@ -71,6 +71,20 @@ export async function editProduct( data : ProductData , id: Product['id'] ) {
 }
 
 export async function deleteProduct( id: Product['id'] ){
-    const url =`${import.meta.env.VITE_API_URL}/api/products/${id}`;
-    await axios.delete( url );
+    try {
+        const url =`${import.meta.env.VITE_API_URL}/api/products/${id}`;
+        await axios.delete( url );
+    } catch (error) {
+        console.log("🚀 ~ deleteProduct ~ error:", error)
+    }
+}
+
+export async function updateProductAvailabity( id: Product['id'] ){
+    try {
+        const url =`${import.meta.env.VITE_API_URL}/api/products/${id}`;
+        await axios.patch( url );
+    } catch (error) {
+        console.log("🚀 ~ updateAvailabity ~ error:", error)
+
+    }
 }
