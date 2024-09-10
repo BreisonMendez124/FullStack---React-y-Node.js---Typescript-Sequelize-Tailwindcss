@@ -69,3 +69,8 @@ export async function editProduct( data : ProductData , id: Product['id'] ) {
         console.log("🚀 ~ addProduct ~ error:", error)
     }
 }
+
+export async function deleteProduct( id: Product['id'] ){
+    const url =`${import.meta.env.VITE_API_URL}/api/products/${id}`;
+    await axios.delete( url );
+}
